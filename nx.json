@@ -36,7 +36,8 @@
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
-      }
+      },
+      "exclude": ["apps/api-e2e/**/*"]
     }
   ],
   "generators": {
@@ -56,5 +57,12 @@
       }
     }
   },
-  "nxCloudAccessToken": "YjhlZTIwMmItZWJiOS00YzZiLWE5OTctMmY2MTliZTQ0NjA1fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MjE2NThjNDgtMjM5Yy00M2U4LWI5YjItYzU3ODFkNDcwNWVjfHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "@nx/esbuild:esbuild": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
