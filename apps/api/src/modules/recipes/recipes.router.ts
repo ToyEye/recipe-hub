@@ -4,8 +4,13 @@ export const recipesRouter = router({
   getRecipes: publicProcedure.query(async () => {
     return [
       {
-        id: 1,
-        name: 'Alex',
+        description: '',
+        id: '',
+        img: '',
+        name: '',
+        ingredients: [''],
+        instructions: [''],
+        vote_average: 0,
       },
     ];
   }),

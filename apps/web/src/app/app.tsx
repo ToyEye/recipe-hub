@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import styles from './app.module.scss';
 
-import NxWelcome from './nx-welcome';
 import { trpcClient } from '../services/trpc';
+import styles from './app.module.scss';
+import NxWelcome from './nx-welcome';
 
 export function App() {
   useEffect(() => {
