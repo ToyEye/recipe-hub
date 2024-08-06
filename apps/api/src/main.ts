@@ -7,11 +7,13 @@ import { appRouter } from './trpc/router';
 
 import 'dotenv/config';
 
+const { FRONT_URL } = process.env;
+
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 server.register(cors, {
-  origin: ['http://localhost:4200'],
+  origin: [FRONT_URL],
   credentials: true,
 });
 
