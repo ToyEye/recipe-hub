@@ -4,5 +4,26 @@ $lg: 1240px;
 
 /* colors */
 
-$main-bg-color: '';
-$main-light-bg-color: '';
+$bg-main-color: #111827;
+/* $bg-secondary-color: ''; */
+
+$bg-main-light-color: #dddddd;
+$bg-secondary-light-color: #f5f5f5;
+
+$text-main-color: #4b5563;
+$text-secondary-color: #f5f5f5;
+
+$text-main-hover-color: #9ca3af;
+$text-secondary-hover-color: #76849e;
+
+$border-main-color: #d1d5db;
+
+$error-main: #f44336;
+
+/* Transition */
+$transition: 350ms cubic-bezier(0.19, 1, 0.22, 1);
+
+/* Shape */
+
+$border-radius: 8px;
+$chat-border-radius: 16px;
