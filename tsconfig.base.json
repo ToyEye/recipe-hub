@@ -8,7 +8,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ESNext",
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@app/api": ["apps/api/src/*"],
-      "@app/web": ["apps/web/src"]
+      "@app/web": ["apps/web/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
