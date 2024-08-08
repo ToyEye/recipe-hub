@@ -80,6 +80,7 @@
 
   .menuBtn {
     color: #ffffff;
+    z-index: 2;
 
     @media screen and (min-width: $md) {
       display: none;
