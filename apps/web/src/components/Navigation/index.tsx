@@ -1,3 +1,4 @@
+import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Container, IconButton, List, ListItem } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -7,7 +8,7 @@ import { routes } from '../../routes';
 import styles from './Navigation.module.scss';
 
 export const Navigation = () => {
-  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
+  const [isOpenMobileMenu, setIsOpenMobileMenu] = useState<boolean>(false);
 
   const toggleMobileMenu = () => {
     setIsOpenMobileMenu((prev) => !prev);
@@ -47,8 +48,11 @@ export const Navigation = () => {
             onClick={toggleMobileMenu}
             className={styles.menuBtn}
           >
-            <MenuIcon />
+            {isOpenMobileMenu ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
+          {/* <IconButton>
+            <CloseIcon />
+          </IconButton> */}
           <Box
             component="div"
             className={`${styles.listWrapper} ${
