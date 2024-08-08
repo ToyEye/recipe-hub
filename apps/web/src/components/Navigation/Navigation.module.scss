@@ -1,2 +1,88 @@
+@import '../../styles/variables.scss';
+
 .header {
+  background-color: $bg-main-color;
+}
+
+.nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .listWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bg-main-color;
+
+    width: 50%;
+    height: 100%;
+
+    border: solid 1px $border-main-color;
+    border-radius: $border-radius;
+
+    transform: scale(0) translateX(110%);
+    transition: $transition;
+
+    &.open {
+      transform: scale(1) translateX(0);
+    }
+
+    @media screen and (min-width: $md) {
+      position: relative;
+      transform: scale(1) translateX(0);
+      background-color: transparent;
+
+      border: none;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-transform: capitalize;
+
+    @media screen and (min-width: $md) {
+      flex-direction: row;
+    }
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .link {
+    display: block;
+    color: $text-secondary-color;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: $transition;
+
+    &:is(:focus, :hover):not(.logo) {
+      color: $text-secondary-hover-color;
+    }
+  }
+
+  .active {
+    color: $text-secondary-hover-color;
+    transform: scale(1.4);
+  }
+
+  .menuBtn {
+    color: #ffffff;
+
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+  }
 }
