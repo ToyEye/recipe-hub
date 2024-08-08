@@ -34,6 +34,7 @@
     "fastify": "~4.13.0",
     "fastify-plugin": "~4.5.0",
     "jsonwebtoken": "^9.0.2",
+    "modern-normalize": "^2.0.0",
     "pino": "^9.3.2",
     "pino-pretty": "^11.2.2",
     "react": "18.3.1",
