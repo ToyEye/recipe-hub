@@ -52,11 +52,13 @@ export const Statictics = () => {
           {statsArray.map(({ id, count, title }, idx) => (
             <ListItem key={id} className={styles.item}>
               <Box component="div" className={styles.optionThumb}>
-                <img
-                  src={imgArray[idx].img}
-                  alt={imgArray[idx].aria}
-                  aria-label={imgArray[idx].aria}
-                />
+                <Box component="div" className={styles.imgWrapper}>
+                  <img
+                    src={imgArray[idx].img}
+                    alt={imgArray[idx].aria}
+                    aria-label={imgArray[idx].aria}
+                  />
+                </Box>
                 <Box component="div" className={styles.optionContent}>
                   {imgArray[idx].description}
                 </Box>

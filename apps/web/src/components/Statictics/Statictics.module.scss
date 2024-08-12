@@ -91,6 +91,17 @@
     transition: $slow-transition;
   }
 
+  .imgWrapper {
+    &::after {
+      content: '';
+      background-color: #24171754;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+
   &:hover .optionContent {
     transform: translateY(0);
   }
