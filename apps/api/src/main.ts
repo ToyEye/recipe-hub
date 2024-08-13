@@ -1,11 +1,10 @@
-import cors from '@fastify/cors';
+import 'dotenv/config';
 
+import cors from '@fastify/cors';
 import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify';
 
 import { server } from './server';
 import { appRouter } from './trpc/router';
-
-import 'dotenv/config';
 
 const { FRONT_URL } = process.env;
 
