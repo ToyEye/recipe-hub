@@ -4,6 +4,7 @@ import cors from '@fastify/cors';
 import { fastifyTRPCPlugin } from '@trpc/server/adapters/fastify';
 
 import { server } from './server';
+import { createContext } from './trpc/context';
 import { appRouter } from './trpc/router';
 
 const { FRONT_URL } = process.env;
@@ -18,7 +19,7 @@ server.register(cors, {
 
 server.register(fastifyTRPCPlugin, {
   prefix: '/trpc',
-  trpcOptions: { router: appRouter },
+  trpcOptions: { router: appRouter, createContext },
 });
 
 server.listen({ port, host }, (error) => {

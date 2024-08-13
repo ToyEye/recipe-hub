@@ -1,4 +1,4 @@
-import { Recipe, Recipes } from '../entities/user.entity';
+import { Recipes } from '../entities/recipe.entity';
 
 export type getAllRecipeResult = Recipes;
 
