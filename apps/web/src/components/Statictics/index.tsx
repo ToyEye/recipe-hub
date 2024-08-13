@@ -2,11 +2,13 @@ import CommentIcon from '@mui/icons-material/Comment';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { Box, Container, List, ListItem, Typography } from '@mui/material';
+import { useEffect } from 'react';
 
 import statsCommentsImg from '/img/statComments.webp';
 import statsRecipesImg from '/img/statRecipe.webp';
 import statsUserImg from '/img/statUsers.webp';
 
+import { trpcClient } from '../../services/trpc';
 import styles from './Statictics.module.scss';
 
 const imgArray = [
@@ -42,6 +44,18 @@ export const Statictics = () => {
     { id: 3, title: 'Comments', count: 100 },
   ];
 
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await trpcClient.recipes.getRecipes.query();
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, []);
+
   return (
     <Box component="section" className={styles.section}>
       <Container>
@@ -59,12 +73,6 @@ export const Statictics = () => {
                     aria-label={imgArray[idx].aria}
                   />
                 </Box>
-
-                <img
-                  src={imgArray[idx].img}
-                  alt={imgArray[idx].aria}
-                  aria-label={imgArray[idx].aria}
-                />
 
                 <Box component="div" className={styles.optionContent}>
                   {imgArray[idx].description}

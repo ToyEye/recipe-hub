@@ -1,7 +1,9 @@
 import { initTRPC } from '@trpc/server';
 import { ZodError } from 'zod';
 
-export const t = initTRPC.context().create({
+import { Context } from './context';
+
+export const t = initTRPC.context<Context>().create({
   errorFormatter(opts) {
     const { shape, error } = opts;
     return {
