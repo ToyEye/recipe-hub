@@ -59,6 +59,13 @@ export const Statictics = () => {
                     aria-label={imgArray[idx].aria}
                   />
                 </Box>
+
+                <img
+                  src={imgArray[idx].img}
+                  alt={imgArray[idx].aria}
+                  aria-label={imgArray[idx].aria}
+                />
+
                 <Box component="div" className={styles.optionContent}>
                   {imgArray[idx].description}
                 </Box>
