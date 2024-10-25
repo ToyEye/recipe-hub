@@ -47,7 +47,7 @@ export const Statictics = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const data = await trpcClient.recipes.getRecipes.query();
+        const data = await trpcClient.recipes.getRandomRecipes.query();
         console.log(data);
       } catch (error) {
         console.log(error);

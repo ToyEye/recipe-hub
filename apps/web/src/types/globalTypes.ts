@@ -1,14 +1,15 @@
 export interface IRecipe {
-  name: string;
-  description: string;
-  img: string;
+  id: number;
+  name: string | null;
   ingredients: string[];
   instructions: string[];
-  vote_average: number;
-  id: string;
+  country: string;
+  description: string;
+  img: string | null;
+  // vote_average?: number;
 }
 
-export type TRecipes = [IRecipe];
+export type TRecipes = IRecipe[];
 
 export interface IRecipeStore extends IStatus {
   recipes: [IRecipe] | null;

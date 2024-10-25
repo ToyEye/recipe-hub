@@ -7,6 +7,7 @@ import { Layout } from './Layout';
 const Home = lazy(() => import('../pages/Home/Home'));
 const Profile = lazy(() => import('../pages/Profile/Profile'));
 const Recipes = lazy(() => import('../pages/Recipes/Recipes'));
+// const Recipe = lazy(() => import('../pages/Recipe/Recipe'));
 
 export const createRoutes = (): RouteObject[] => [
   {
@@ -15,6 +16,7 @@ export const createRoutes = (): RouteObject[] => [
     children: [
       { path: routes.HOME, element: <Home /> },
       { path: routes.RECIPES, element: <Recipes /> },
+      // { path: routes.RECIPES, element: <Recipe /> },
       { path: routes.PROFILE, element: <Profile /> },
     ],
   },

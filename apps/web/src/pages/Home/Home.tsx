@@ -1,4 +1,5 @@
 import { Hero } from '../../components/Hero';
+import { RandomRecipes } from '../../components/RandomRecipes';
 import { Statictics } from '../../components/Statictics';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <Hero />
       <Statictics />
+      <RandomRecipes />
     </>
   );
 };
