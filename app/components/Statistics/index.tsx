@@ -1,13 +1,13 @@
 import { Box, Container, List, ListItem, Typography } from "@mui/material";
-import { lazy, useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 
 import statsCommentsImg from "/img/statComments.webp";
 import statsRecipesImg from "/img/statRecipe.webp";
 import statsUserImg from "/img/statUsers.webp";
 
-// const CommentIcon = lazy(() => import("@mui/icons-material/Comment"));
-// const MenuBookIcon = lazy(() => import("@mui/icons-material/MenuBook"));
-// const PeopleAltIcon = lazy(() => import("@mui/icons-material/PeopleAlt"));
+const CommentIcon = lazy(() => import("@mui/icons-material/Comment"));
+const MenuBookIcon = lazy(() => import("@mui/icons-material/MenuBook"));
+const PeopleAltIcon = lazy(() => import("@mui/icons-material/PeopleAlt"));
 
 export const Statistics = () => {
   const imgArray = [
@@ -15,7 +15,7 @@ export const Statistics = () => {
       id: 1,
       aria: "Recipe Image",
       img: statsRecipesImg,
-      // icon: <MenuBookIcon />,
+      icon: <MenuBookIcon className="w-6" />,
       description:
         "Here you can find more than 50 recipes from different countries of the world. Add. Discuss. Cook.",
     },
@@ -23,7 +23,7 @@ export const Statistics = () => {
       id: 2,
       aria: "User Image",
       img: statsUserImg,
-      // icon: <PeopleAltIcon />,
+      icon: <PeopleAltIcon className="w-6" />,
       description:
         "We already have 500 registered users who are already preparing together",
     },
@@ -31,7 +31,7 @@ export const Statistics = () => {
       id: 3,
       aria: "Comments Image",
       img: statsCommentsImg,
-      // icon: <CommentIcon />,
+      icon: <CommentIcon className="w-6" />,
       description: "1020 comments written by our users",
     },
   ];
@@ -71,7 +71,7 @@ export const Statistics = () => {
 
                 <Box
                   component="div"
-                  className="absolute top-0 left-0  leading-[2.4] tracking-wider flex justify-center items-center w-full h-full p-[15px] text-off-white bg-overlay-dark -translate-y-full transition-all duration-350 ease-linear group-hover:translate-y-0"
+                  className="absolute top-0 left-0  leading-[2.4] tracking-wider flex justify-center items-center w-full h-full p-[15px] text-off-white bg-overlay-dark -translate-y-full transition-all duration-350 ease-linear group-hover:translate-y-0 md:leading-[1.5]"
                 >
                   {imgArray[idx].description}
                 </Box>
@@ -85,7 +85,7 @@ export const Statistics = () => {
                   {title} in the hub
                 </Typography>
                 <Typography component="p" className="flex items-center gap-2">
-                  {/* {imgArray[idx].icon} */}
+                  <Suspense>{imgArray[idx].icon}</Suspense>
                   {count}
                 </Typography>
               </Box>
