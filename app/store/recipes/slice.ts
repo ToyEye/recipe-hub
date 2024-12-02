@@ -1,11 +1,6 @@
-import { asyncThunkCreator, buildCreateSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 import { type IRecipeStore } from "../../types/globalTypes";
-import { getRecipesAsynkThunk } from "./operations";
-
-const createSlice = buildCreateSlice({
-  creators: { asyncThunk: asyncThunkCreator },
-});
 
 const initialState: IRecipeStore = {
   recipes: null,
@@ -16,7 +11,11 @@ const initialState: IRecipeStore = {
 const recipeSlice = createSlice({
   name: "recipes",
   initialState,
-  reducers: (creator) => ({ getRecipes: getRecipesAsynkThunk(creator) }),
+  reducers: {
+    getRecipes: (state, { payload }) => {
+      state.recipes = payload;
+    },
+  },
   selectors: {
     selectRecipes: (state) => state,
   },

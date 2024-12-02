@@ -1,3 +1,6 @@
+import "./tailwind.css";
+
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -5,10 +8,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import { Provider } from "react-redux";
 
-import "./tailwind.css";
 import { Navigation } from "./components/Navigation";
+import { store } from "./store/store";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,8 +36,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Navigation />
-        {children}
+        <Provider store={store}>
+          <Navigation />
+          {children}
+        </Provider>
         <ScrollRestoration />
         <Scripts />
       </body>

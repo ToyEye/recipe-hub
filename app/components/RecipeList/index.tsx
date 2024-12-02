@@ -25,11 +25,11 @@ export const RecipeList: FC<{ recipes: TRecipes }> = ({ recipes }) => {
     return text;
   };
   return (
-    <List className="grid grid-cols-1 gap-6 md:gap-3 md:grid-cols-3">
+    <List className="grid grid-cols-1 gap-6 md:gap-6 md:grid-cols-3">
       {recipes.map(({ id, img, name, description }) => (
         <ListItem
           key={id}
-          className="max-w-80 mx-auto overflow-hidden rounded-lg md:max-w-max"
+          className="max-w-80 mx-auto overflow-hidden rounded-lg md:max-w-max hover:scale-105 transition-all duration-500 ease-custom-ease  "
         >
           <Link to={`/recipes/${id}`}>
             <Card>
