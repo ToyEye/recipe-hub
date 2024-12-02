@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import recipeData from "./seed";
+import recipeData from "../recipes.json" with {type:"json"};
 
 const prisma = new PrismaClient();
 

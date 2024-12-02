@@ -21,4 +21,5 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  // optimizeDeps: { entries: ["./app/root.tsx"] },
 });

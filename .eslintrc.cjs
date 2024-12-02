@@ -32,7 +32,7 @@ module.exports = {
     // React
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
-      plugins: ["react", "jsx-a11y"],
+      plugins: ["react", "jsx-a11y", "simple-import-sort"], // Добавляем плагин simple-import-sort
       extends: [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
@@ -52,12 +52,17 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        // Правило для сортировки импортов
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error", // если нужно сортировать экспорты
+      },
     },
 
     // Typescript
     {
       files: ["**/*.{ts,tsx}"],
-      plugins: ["@typescript-eslint", "import"],
+      plugins: ["@typescript-eslint", "import", "simple-import-sort"], // Добавляем плагин для TypeScript
       parser: "@typescript-eslint/parser",
       settings: {
         "import/internal-regex": "^~/",
@@ -75,6 +80,11 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        // Правило для сортировки импортов
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+      },
     },
 
     // Node
