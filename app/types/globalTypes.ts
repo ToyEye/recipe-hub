@@ -13,6 +13,9 @@ export type TRecipes = IRecipe[];
 
 export interface IRecipeStore extends IStatus {
   recipes: IRecipe[] | null;
+  currentPage: number;
+  totalPages: number;
+  totalRecipes: number;
 }
 
 export type TReview = {

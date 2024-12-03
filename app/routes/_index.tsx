@@ -9,7 +9,7 @@ import { getRandomRecipes } from "~/utils/recipeRandomizer";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Recipes Hub" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
