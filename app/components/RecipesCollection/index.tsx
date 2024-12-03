@@ -7,7 +7,6 @@ import { TRecipes } from "~/types/globalTypes";
 
 import { RecipeList } from "../RecipeList";
 import { RecipePagination } from "../RecipePagination";
-// import { Pagination } from "../Pagination";
 
 export const RecipesCollection: FC<{ recipes: TRecipes }> = ({ recipes }) => {
   // const recipes = useAppSelector(selectRecipes);

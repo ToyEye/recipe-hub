@@ -15,13 +15,15 @@ export const RecipePagination: FC<PaginationProps> = ({
   const pagination = getPagination(currentPage, totalPages);
 
   return (
-    <div className=" mx-auto flex justify-center gap-2 mt-4 md:mt-6">
+    <div className=" mx-auto flex justify-center gap-3 mt-4 md:mt-6">
       {pagination.map((page, index) =>
         typeof page === "number" ? (
           <Link
             key={index}
             to={`?page=${page}`}
-            className={page === currentPage ? "active" : ""}
+            className={`w-6 h-6 flex justify-center items-center border border-solid rounded-full border-graphite transition-all duration-1000 ease-custom-ease hover:bg-graphite hover:text-off-white  ${
+              page === currentPage && "scale-150 "
+            } `}
           >
             {page}
           </Link>
