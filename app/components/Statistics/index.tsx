@@ -1,5 +1,5 @@
 import { Box, Container, List, ListItem, Typography } from "@mui/material";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 
 import statsCommentsImg from "/img/statComments.webp";
 import statsRecipesImg from "/img/statRecipe.webp";
@@ -47,7 +47,7 @@ export const Statistics = () => {
       <Container className="container mx-auto">
         <Typography
           component="h2"
-          className="font-bold mb-3 text-3xl text-center tracking-wide md:text-4xl md:mb-4"
+          className="font-bold mb-3 text-3xl text-center tracking-wide md:text-5xl md:mb-4"
         >
           Hub Statistics
         </Typography>

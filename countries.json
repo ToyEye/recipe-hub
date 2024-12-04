@@ -1,0 +1,66 @@
+[
+  {
+    "country": "Thailand",
+    "description": "Known for spicy, sweet, and sour flavors with fresh herbs and street food."
+  },
+  {
+    "country": "United States",
+    "description": "Known for its melting pot of global cuisines and fast food culture."
+  },
+  {
+    "country": "France",
+    "description": "Famed for wine, cheese, bread, and intricate pastries."
+  },
+  {
+    "country": "Mexico",
+    "description": "Famous for tacos, salsas, and the use of chili, corn, and beans."
+  },
+  {
+    "country": "Greece",
+    "description": "Famous for olives, feta, and fresh, simple Mediterranean dishes."
+  },
+  {
+    "country": "Vietnam",
+    "description": "Light, fresh cuisine with an emphasis on herbs, rice noodles, and broths."
+  },
+  {
+    "country": "Japan",
+    "description": "Traditional cuisine features rice, fish, and seasonal ingredients."
+  },
+  {
+    "country": "Middle East",
+    "description": "Known for dishes like hummus, falafel, and a strong spice culture."
+  },
+  {
+    "country": "Hungary",
+    "description": "Known for paprika-rich dishes like goulash and hearty soups."
+  },
+  {
+    "country": "Peru",
+    "description": "Known for ceviche, potatoes, and diverse regional ingredients."
+  },
+  {
+    "country": "India",
+    "description": "Rich in spices, Indian cuisine is known for its diverse curries and breads."
+  },
+  {
+    "country": "Ukraine",
+    "description": "Traditional dishes include borscht, varenyky, and rich bread culture."
+  },
+  {
+    "country": "Spain",
+    "description": "Famed for tapas, paella, and Mediterranean ingredients like olive oil."
+  },
+  {
+    "country": "China",
+    "description": "Rich culinary history with regional specialties like dim sum and noodles."
+  },
+  {
+    "country": "United Kingdom",
+    "description": "Home to traditional roasts, fish and chips, and a strong tea culture."
+  },
+  {
+    "country": "Italy",
+    "description": "Known for pasta, pizza, and a culture of long, shared meals."
+  }
+]

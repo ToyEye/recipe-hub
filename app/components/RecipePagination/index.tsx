@@ -15,7 +15,7 @@ export const RecipePagination: FC<PaginationProps> = ({
   const pagination = getPagination(currentPage, totalPages);
 
   return (
-    <div className=" mx-auto flex justify-center gap-3 mt-4 md:mt-6">
+    <div className=" mx-auto flex justify-center gap-3 mt-4 md:mt-8">
       {pagination.map((page, index) =>
         typeof page === "number" ? (
           <Link

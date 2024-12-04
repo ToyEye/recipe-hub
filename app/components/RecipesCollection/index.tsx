@@ -17,7 +17,7 @@ export const RecipesCollection: FC<{ recipes: TRecipes }> = ({ recipes }) => {
       <Container className="container mx-auto">
         <Typography
           component="h2"
-          className="font-bold mb-3 text-3xl text-center tracking-wide md:text-4xl md:mb-4"
+          className="font-bold mb-3 text-3xl text-center tracking-wide md:text-5xl md:mb-4"
         >
           Recipe Collection
         </Typography>
