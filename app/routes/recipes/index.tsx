@@ -3,6 +3,7 @@ import { useLoaderData } from "@remix-run/react";
 import { useEffect } from "react";
 
 import { Filter } from "~/components/Filter";
+import { NotFoundRecipe } from "~/components/NotFoundRecipe";
 import { RecipeHero } from "~/components/RecipeHero";
 import { RecipesCollection } from "~/components/RecipesCollection";
 import prisma from "~/db.server";
@@ -55,12 +56,21 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
     currentPage: page,
     totalPages: Math.ceil(totalRecipes / pageSize),
     countries,
+    country,
+    searchQuery,
   });
 };
 
 export default function Recipes() {
-  const { recipes, currentPage, totalPages, totalRecipes, countries } =
-    useLoaderData<typeof loader>();
+  const {
+    recipes,
+    currentPage,
+    totalPages,
+    totalRecipes,
+    countries,
+    searchQuery,
+    country,
+  } = useLoaderData<typeof loader>();
 
   const dispatch = useAppDispatch();
 
@@ -73,7 +83,11 @@ export default function Recipes() {
     <div>
       <RecipeHero />
       <Filter />
-      <RecipesCollection recipes={recipes} />
+      {recipes.length === 0 ? (
+        <NotFoundRecipe recipeName={searchQuery} country={country} />
+      ) : (
+        <RecipesCollection recipes={recipes} />
+      )}
     </div>
   );
 }

@@ -40,7 +40,11 @@ export const Filter = () => {
           Search recipes
         </Typography>
 
-        <Form method="get" id="filter-form" className="flex justify-between">
+        <Form
+          method="get"
+          id="filter-form"
+          className="w-80 flex mx-auto flex-col gap-6 md:w-auto md:flex-row md:justify-between"
+        >
           <input type="hidden" name="page" value="1" />
           <div className="flex flex-col">
             <label htmlFor="country" className="mb-3">
@@ -53,7 +57,7 @@ export const Filter = () => {
               defaultValue=""
               value={selectedCountry}
               onChange={handleChange}
-              className="py-1 px-2 rounded-md"
+              className="py-[6px] px-2 rounded-md"
             >
               <option value="">All Countries</option>
               {countries.map(({ id, country }) => (
@@ -64,7 +68,7 @@ export const Filter = () => {
             </select>
           </div>
 
-          <div className="flex items-end gap-6">
+          <div className="flex items-end gap-3 flex-col md:flex-row md:gap-6">
             <div className="flex flex-col">
               <label htmlFor="search" className="mb-3">
                 Search by Recipe Name:
@@ -74,7 +78,7 @@ export const Filter = () => {
                 name="search"
                 id="search"
                 placeholder="Search recipe"
-                className="py-1 px-3 "
+                className="py-1 px-3 w-80"
                 defaultValue={selectedRecipe}
               />
             </div>
